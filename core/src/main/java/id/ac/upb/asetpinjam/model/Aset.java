@@ -84,8 +84,8 @@ public class Aset implements DapatDipinjam {
         throw new UnsupportedOperationException("TODO minggu 3");
     }
 
-    /** TODO minggu 4: denda keterlambatan. Dioverride tiap subclass (aturan di docs/aturan-bisnis.md). */
+    /** Denda keterlambatan; dioverride tiap subclass dengan multiplier jenisnya. */
     public long hitungDenda(int hariTerlambat) {
-        throw new UnsupportedOperationException("TODO minggu 4");
+        throw new UnsupportedOperationException("Denda dihitung oleh subclass");
     }
 }
