@@ -3,11 +3,11 @@
 Salin berkas ini menjadi `catatan/minggu-NN.md` (NN dua digit, misalnya `minggu-07.md`).
 
 ## Yang saya kerjakan
-(2-5 kalimat dengan bahasa Anda sendiri)
+yang saya kerjakan adalah instal apache maven 3.9.16 dan jdk 21 yang dibantu teman saya, setelah itu saya mengerjakan HalloFungsional.java, HalloOOP.java, HelloPresedural.java.
 
 ## Keputusan desain
 (Apa yang Anda putuskan dan kenapa. Rujuk docs/asumsi.md bila perlu.)
-dtd
+
 ## Kendala
 Kesulitan dalam
 
