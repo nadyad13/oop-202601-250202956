@@ -1,5 +1,7 @@
 package id.ac.upb.asetpinjam.model;
 
+import id.ac.upb.asetpinjam.config.Varian;
+
 /** Minggu 3: aset berupa laptop. Spesifikasi dan nomor inventaris tidak boleh kosong. */
 public class Laptop extends Aset {
 
@@ -31,5 +33,12 @@ public class Laptop extends Aset {
         return JenisAset.LAPTOP;
     }
 
-    // TODO minggu 4: override hitungDenda(int).
+    /** Laptop memakai multiplier denda 2x. */
+    @Override
+    public long hitungDenda(int hariTerlambat) {
+        if (hariTerlambat < 0) {
+            throw new IllegalArgumentException("Hari terlambat tidak boleh negatif");
+        }
+        return (long) hariTerlambat * 2 * Varian.aktif().dendaPerHari;
+    }
 }
