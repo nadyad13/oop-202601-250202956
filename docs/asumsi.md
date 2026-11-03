@@ -28,3 +28,11 @@ Salin setiap pertanyaan ambigu (nomor 1 sampai 7) ke sini dan jawab. Contoh:
 ## Asumsi lain
 
 Tambahkan di sini keputusan lain yang Anda ambil: rumus denda progresif, perubahan skema database, format error API, dan seterusnya.
+
+## A-01: rumus denda progresif
+- Pertanyaan: bagaimana denda naik setelah beberapa hari terlambat?
+- Keputusan: pakai denda flat, lalu tambah tarif harian untuk setiap hari setelah hari ke-7.
+- Alasan: tetap sederhana, tidak pernah lebih murah dari flat, dan makin berat untuk keterlambatan lama.
+- Dampak ke kode: `DendaProgresif.hitung`.
+- Tes yang membuktikan: `Minggu05AbstraksiTest.dendaProgresifMemenuhiSyaratMinimal`.
+
