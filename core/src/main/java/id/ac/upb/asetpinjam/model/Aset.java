@@ -85,11 +85,5 @@ public abstract class Aset implements DapatDipinjam {
     }
 
     /** Denda keterlambatan; dioverride tiap subclass dengan multiplier jenisnya. */
-<<<<<<< HEAD
     public abstract long hitungDenda(int hariTerlambat);
-=======
-    public long hitungDenda(int hariTerlambat) {
-        throw new UnsupportedOperationException("Denda dihitung oleh subclass");
-    }
->>>>>>> 2d752fb418eaac47442e4345e9c78f6c866bf21a
 }
