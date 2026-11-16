@@ -2,8 +2,11 @@ package id.ac.upb.asetpinjam.jadwal;
 
 import id.ac.upb.asetpinjam.model.Peminjaman;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Jadwal peminjaman di memori.
@@ -34,26 +37,42 @@ public class JadwalPeminjaman {
     }
 
     /**
-     * TODO minggu 7: true jika {@code baru} bentrok dengan peminjaman yang sudah ada untuk ASET YANG SAMA.
-     * Definisi "bentrok" di batas waktu (selesai sama dengan mulai) adalah KEPUTUSAN ANDA (docs/asumsi.md).
+     * True jika {@code baru} bentrok dengan peminjaman yang sudah ada untuk ASET YANG SAMA.
+     * Batas waktu diperlakukan sebagai rentang setengah terbuka: selesai sama dengan mulai
+     * dianggap TIDAK bentrok (docs/asumsi.md A-01).
      */
     public boolean bentrok(Peminjaman baru) {
-        throw new UnsupportedOperationException("TODO minggu 7: bentrok");
+        if (baru == null) {
+            throw new IllegalArgumentException("Peminjaman yang diperiksa tidak boleh null");
+        }
+        String kodeAset = baru.getAset().getKode();
+        return daftar.stream()
+                .anyMatch(lama -> lama.getAset().getKode().equals(kodeAset) && tumpangTindih(lama, baru));
     }
 
-    /** TODO minggu 7: semua peminjaman, diurutkan menurut waktu mulai (gunakan Comparator). */
+    /** Dua rentang [mulai, selesai) tumpang tindih jika saling memotong, bukan hanya bersentuhan. */
+    private static boolean tumpangTindih(Peminjaman a, Peminjaman b) {
+        return a.getMulai().isBefore(b.getSelesai()) && b.getMulai().isBefore(a.getSelesai());
+    }
+
+    /** Semua peminjaman, diurutkan menaik menurut waktu mulai. */
     public List<Peminjaman> semuaUrutMulai() {
-        throw new UnsupportedOperationException("TODO minggu 7: semuaUrutMulai");
+        return daftar.stream()
+                .sorted(Comparator.comparing(Peminjaman::getMulai).thenComparing(Peminjaman::getId))
+                .toList();
     }
 
-    /** TODO minggu 7: peminjaman dikelompokkan menurut kode aset. */
+    /** Peminjaman dikelompokkan menurut kode aset, urutan kunci mengikuti urutan penambahan. */
     public Map<String, List<Peminjaman>> perAset() {
-        throw new UnsupportedOperationException("TODO minggu 7: perAset");
+        return daftar.stream().collect(Collectors.groupingBy(
+                p -> p.getAset().getKode(),
+                LinkedHashMap::new,
+                Collectors.toList()));
     }
 
-    /** TODO minggu 7: hapus peminjaman berdasarkan id. True jika ada yang terhapus. */
+    /** Hapus peminjaman berdasarkan id. True jika ada yang terhapus. */
     public boolean hapus(String id) {
-        throw new UnsupportedOperationException("TODO minggu 7: hapus");
+        return daftar.removeIf(p -> p.getId().equals(id));
     }
 
     /**

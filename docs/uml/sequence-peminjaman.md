@@ -52,5 +52,5 @@ sequenceDiagram
 | Bentrok | `bentrok()` mengembalikan `true`; `ajukan()` melempar `PeminjamanBentrokException` dan tidak memanggil `tambah()`. |
 | Kuota habis | Tidak bentrok, tetapi laptop aktif peminjam sudah mencapai `kuotaLaptop()`; `KuotaHabisException` dilempar. |
 
-Catatan: `ajukan()` dan `bentrok()` masih bertanda TODO minggu 7/9. Diagram ini mengikuti kontrak
-di Javadoc kedua metode dan nama kelas/metode yang sudah ada, bukan menambah kelas baru.
+Catatan: `ajukan()` masih bertanda TODO minggu 9, sedangkan `bentrok()` sudah diisi pada minggu 7.
+Diagram ini mengikuti kontrak di Javadoc dan nama kelas/metode yang sudah ada, bukan menambah kelas baru.
