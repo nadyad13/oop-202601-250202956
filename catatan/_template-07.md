@@ -14,6 +14,6 @@ Sempat bingung menentukan rumus tumpang tindih. Saya cek dengan empat kasus: tum
 ## Penggunaan AI
 - Alat yang dipakai: ChatGPT
 - Bagian yang dibantu AI: mengisi empat metode `JadwalPeminjaman` dan merapikan tes batas waktu.
-- Prompt utama: "Isi bentrok, semuaUrutMulai, perAset, dan hapus di JadwalPeminjaman sesuai docs/minggu-07.md."
-- Yang saya ubah atau tolak dari saran AI, dan alasannya: saya pilih tidak menambah Map/Set, karena data masih kecil dan tiga struktur harus dijaga sinkron.
+- Prompt utama: "Isi bentrok, semua Urut Mulai, perAset, dan hapus di JadwalPeminjaman sesuai docs/minggu-07.md."
+- Yang saya ubah atau tolak dari saran AI, dan alasannya: saya pilih tidak menambah Map/Set, karena data masih kecil dan tiga struktur harus dijaga sinkrossn.
 - Satu hal yang saya pahami lebih baik sekarang: `groupingBy` cukup untuk mengelompokkan data saat dibutuhkan, tanpa menyimpan salinan kedua.
