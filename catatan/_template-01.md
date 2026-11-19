@@ -1,19 +1,22 @@
-# Catatan Minggu 01:  Paradigma Pemrograman dan Setup
-
-Salin berkas ini menjadi `catatan/minggu-NN.md` (NN dua digit, misalnya `minggu-07.md`).
+# Catatan Minggu 01: Paradigma Pemrograman dan Setup
 
 ## Yang saya kerjakan
-yang saya kerjakan adalah instal apache maven 3.9.16 dan jdk 21 yang dibantu teman saya, setelah itu saya mengerjakan HalloFungsional.java, HalloOOP.java, HelloPresedural.java.
+Saya memasang JDK 21 dan Maven 3.9.16, lalu mengisi `HelloProsedural`, `HelloOOP`, dan `HelloFungsional` dengan sapaan yang sama. Tes minggu 1 lulus 5/5.
 
 ## Keputusan desain
-(Apa yang Anda putuskan dan kenapa. Rujuk docs/asumsi.md bila perlu.)
+- Kalimat sapaan: "Hallo Aset-Pinjam <nama> (<NIM>)" di ketiga gaya, supaya hasilnya mudah dibandingkan.
+- Prosedural: kelebihan sederhana untuk program kecil; keterbatasan data dan fungsi terpisah sehingga susah saat sistem membesar.
+- OOP: kelebihan data dan perilaku terbungkus di class; keterbatasan butuh lebih banyak class/kode untuk program kecil.
+- Fungsional: kelebihan fungsi bisa disimpan dan digabung, minim state; keterbatasan kurang cocok untuk data yang sering berubah seperti status peminjaman.
 
 ## Kendala
-Kesulitan dalam
+Awalnya sempat error karena `JAVA_HOME` belum diarahkan ke JDK 21. Setelah dibantu teman dan dicek dengan `mvn -v`, tes bisa dijalankan.
 
 ## Penggunaan AI
-- Alat yang dipakai: (nama, atau "tidak memakai")
-- Bagian yang dibantu AI: (kelas/metode)
-- Prompt utama: (tempel 1-3 prompt yang paling menentukan)
-- Yang saya ubah atau tolak dari saran AI, dan alasannya:
-- Satu hal yang saya pahami lebih baik sekarang:
+- Alat yang dipakai: ChatGPT
+- Bagian yang dibantu AI: penyusunan dan perapian catatan minggu 1.
+- Prompt utama:
+  - "kerjakan catatan/minggu-01.md sesuai docs/minggu-01.md, buat singkat dan jelas"
+  - "tambahkan kelebihan dan keterbatasan tiap gaya"
+- Yang saya ubah atau tolak dari saran AI, dan alasannya: draf AI terlalu panjang dan menjelaskan teori umum. Saya ringkas agar hanya berisi yang saya kerjakan dan temuan dari tes.
+- Satu hal yang saya pahami lebih baik sekarang: program yang sama bisa ditulis dengan tiga gaya berbeda, tetapi hasilnya tetap harus sama.

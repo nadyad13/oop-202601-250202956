@@ -14,7 +14,7 @@ Saya juga membereskan sisa konflik merge di `Aset.java` supaya proyek bisa dikom
 `Aset.java` masih menyimpan penanda konflik merge, jadi kode tidak bisa dikompilasi. Saya pilih versi `hitungDenda` abstrak (sesuai minggu 5), lalu tes dijalankan ulang.
 
 ## Penggunaan AI
-- Alat yang dipakai: OpenCode
+- Alat yang dipakai: ChatGPT
 - Bagian yang dibantu AI: membaca struktur kode, menyusun diagram Mermaid, dan merapikan `solid.md`.
 - Prompt utama: "Baca kode di repo ini, lalu buat class diagram dan sequence pengajuan peminjaman yang sesuai kode."
 - Yang saya ubah atau tolak dari saran AI, dan alasannya: saya tidak menambah kelas layanan baru yang belum ada di kode, supaya diagram tidak jadi sketsa ideal.
